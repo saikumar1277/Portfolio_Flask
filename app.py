@@ -15,7 +15,7 @@ app.secret_key = 'super-secret-key'
 
 # connection to database
 app.config["SQLALCHEMY_DATABASE_URI"] = 'mysql+mysqlconnector://{user}:{password}@{server}/{database}'.format(
-    user='root', password='SAIkumar12', server='localhost', database='portfolio')
+    user='root', password='password', server='localhost', database='portfolio')
 
 db = SQLAlchemy(app)
 
