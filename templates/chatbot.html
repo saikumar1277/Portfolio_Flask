@@ -1,0 +1,106 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<style>
+    body {
+        background-color: #040b17;
+        color: white;
+    }
+</style>
+
+<div class="container">
+    <h2 class="text-center">
+        Chat Bot
+    </h2>
+    <h4>Main aim of this project is to provide 24/7 fast services to students
+    </h4>
+    <h4> For Example </h4>
+    <ul>
+        <li>If student what to know when is the last day to pay sem fee.</li>
+        <li>which documents requried for fee reimbursement</li>
+        <li>Mid exam dates</li>
+        <li>particular book available in library or not etc</li>
+    </ul>
+    <p>By using this chat bot students can get clear and fast information about the query,No space for confusion</p>
+    <h4>Steps:</h4>
+    <ol>
+        <li>Student login with his credentials</li>
+        <li>In backend we check he/she is valid user or not</li>
+        <li>if he/she is valid user then ,chat bot provides services</li>
+        <li>Student can enter his/her query</li>
+        <li>If that query is matches with any of the intent, chat bot will provide solution directly</li>
+        <li>If the query not matching any of the intent then chat bot provide some categories ,student has to select the
+            issue in that list of categories</li>
+        <li>Trouble ticket will be generated and stored in database after selection of issue and that Trouble ticket
+            will show to student </li>
+        <li>With that Trouble ticket number he/she can checks the status of the issue when ever he/she wants</li>
+        <li>by typing logout student can logout from chatbot</li>
+    </ol>
+    <br>
+    <h4>Below Image is the high level view of our chat bot</h4>
+
+    <div class="row">
+        <div class="col-sm-8">
+            <img style="width: 100%;height: auto;"
+                src="{{ url_for('static',filename = 'images/chatbothighviewnew.jpg')}}" src=>
+        </div>
+    </div>
+    <br>
+    <h4>Technologies and Tools I used</h4>
+    <ol>
+        <li>DialogFlow for creating bot</li>
+        <li>MongoDB for storing customer details</li>
+        <li>Node js for Run Time Environnment for Executing js code</li>
+        <li>Expressjs</li>
+        <li>ngrok acts as a tunnel between dialogflow and nodejs</li>
+    </ol>
+    <div class="row">
+        <div class="col-sm-4">
+            <h2>DialogFlow</h2>
+            <ol>
+                <li>
+                    Dialogflow is a natural language understanding platform used to design
+                    and integrate a conversational user interface into mobile apps, web applications,
+                    devices, bots, interactive voice response systems and related uses.
+                </li>
+                <li>An “agent” in Dialogflow is the the same as one chatbot.</li>
+                <li>An intent is an action a user wants to do or a question a user has. Example : Order a pizza</li>
+                <li>Entities are facts in a sentence, that refer to the who, what, when and where.Example : I want to
+                    order a <b>veggie</b> pizza.</li>
+                <li>a webhook can be used to fetch data from your server whenever a certain
+                    intent having webhook enabled is invoked.</li>
+            </ol>
+        </div>
+        <div class="col-sm-4">
+            <h2>MongoDB</h2>
+            <p>
+                For storing customer data I used MongoDb ,because it is very efficient when there are fewer realations
+                to manage,It is scalable.In this project user data has no inner relations
+            </p>
+            <ol>
+                <li>
+                    Instead of using tables and rows as in the traditional relational databases,
+                    MongoDB makes use of collections and documents. Documents consist of key-value
+                    pairs which are the basic unit of data in MongoDB.
+                </li>
+                <li>Data is stored in MongoDB in the form of JSON
+                    Style.</li>
+                <li>To interact with MongoDB Mongoose is used</li>
+                <li>It is an Object Data Modeling(ODM) library for MongoDB</li>
+                <li>Using mongoose ,a user can define the schema for the document in a particular collection and we can
+                    manipulate </li>
+            </ol>
+
+        </div>
+        <div class="col-sm-4">
+            <h2>Node js</h2>
+            <p>I want to use JavaScript as a server side programming language,JavaScript runs on browers,to run on local
+                not on brower I used Node js which is a run time Environnment for js</p>
+            <p>And also speed is important in this Application because customer don't wnat to wait for long time,Node js
+                is very faster then php when it comes to chat applications</p>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

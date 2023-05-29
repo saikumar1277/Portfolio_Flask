@@ -1,0 +1,153 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<style>
+    .footer {
+        display: none;
+    }
+</style>
+
+<div style="background-color: #040b17; color: white;">
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="paralax-mf footer-paralax bg-image sect-mt4 route"
+        style="background-image: url(assets/img/overlay-bg.jpg)">
+        <div class="overlay-mf"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="contact-mf">
+                        <div id="contact" class="box-shadow-full">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="title-box-2">
+                                        <h5 class="title-left mb-3">
+                                            Send Message
+                                        </h5>
+                                    </div>
+                                    <div>
+
+
+
+                                        <form action="/contact" method="post" role="form">
+                                            <div class="row">
+                                                <div class="col-md-12 mb-3">
+                                                    <div class="form-group">
+                                                        <input type="text" name="name" class="form-control" id="name"
+                                                            placeholder="Your Name" required>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12 mb-3">
+                                                    <div class="form-group">
+                                                        <input type="email" class="form-control" name="email" id="email"
+                                                            placeholder="Your Email" required>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12 mb-3">
+                                                    <div class="form-group">
+                                                        <input type="text" class="form-control" name="subject"
+                                                            id="subject" placeholder="Subject" required>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <textarea class="form-control" name="message" rows="5"
+                                                            placeholder="Message" required></textarea>
+                                                    </div>
+                                                </div>
+                                                <!-- <div class="col-md-12 text-center my-3">
+                                                    <div class="loading">Loading</div>
+                                                    <div class="error-message"></div>
+                                                    <div class="sent-message">Your message has been sent. Thank
+                                                        you!
+                                                    </div>
+                                                </div> -->
+                                                <div class="col-md-12 text-center" style="margin: 20px 0px;">
+                                                    <button type="submit" class="btn btn-dark m-2">Send
+                                                        Message</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="col-md-6" style="padding-top: 29px;">
+                                    <div class="title-box-2 pt-4 pt-md-0">
+                                        <h5 class="title-left">
+                                            Get in Touch
+                                        </h5>
+                                    </div>
+                                    <div class="more-info">
+                                        <p class="lead">
+                                            <!-- If you have any queries or questions, feel free to message me. Don't
+                                            hesitate to reach out to me, as I am always available and ready to respond
+                                            to your messages. Just type your question or concern and send it to me, and -->
+                                            If you have any questions or queries, feel free to contact me. I am always
+                                            here to help you out with any concerns or doubts you may have. You can reach
+                                            me through my contact details, which may include my email address or social
+                                            media accounts. Whether you need clarification on a
+                                            particular topic or simply want to say
+                                            hello, I am happy to hear from you. I understand the importance of
+                                            communication, and I am committed to providing you with timely and accurate
+                                            information. So, don't hesitate to get in touch with me anytime you need
+                                            assistance.
+                                            I'll get back to you as soon as possible with a helpful and informative
+                                            response.
+                                        </p>
+                                        <ul class="list-ico">
+                                            <li><span class="bi bi-geo-alt"></span>Hyderabad </li>
+                                            <li><span class="bi bi-phone"></span> Telangana</li>
+                                            <!-- <li><span class="bi bi-envelope"></span> kongarisaikumar1277@gmail.com</li> -->
+                                        </ul>
+                                    </div>
+
+                                    <div class="socials">
+                                        <div class="homeIcon">
+                                            <div class="row1" style="display: inline-block;">
+                                                <a href="https://www.linkedin.com/in/sai-kumar-780b74207/"
+                                                    style="margin: 1px 10px;"><img
+                                                        src="{{ url_for('static',filename = 'images/linkedin.svg')}}"
+                                                        alt="" width="32px" height="32px">
+                                                </a>
+                                                <a href="mailto:kongarisaikumar1277@email.com?"
+                                                    style="margin: 1px 10px;"><img
+                                                        src="{{ url_for('static',filename = 'images/gmail.svg')}}"
+                                                        alt="" width="32px" height="32px">
+                                                </a>
+                                                <a href="https://leetcode.com/saikumar1277/"
+                                                    style="margin: 1px 10px;"><img
+                                                        src="{{ url_for('static',filename = 'images/leetcode.svg')}}"
+                                                        alt="" width="32px" height="32px">
+                                                </a>
+                                                <a href="https://auth.geeksforgeeks.org/user/kongarisaikumar12/practice/"
+                                                    style=" margin: 1px 10px;"><img
+                                                        src="{{ url_for('static',filename = 'images/gfg.jfif')}}" alt=""
+                                                        width="32px" height="32px" style="border-radius: 13px;">
+                                                </a>
+                                                <a href="https://www.codechef.com/users/saikumar1277"
+                                                    style=" margin: 1px 10px;"><img
+                                                        src="{{ url_for('static',filename = 'images/codechef.svg')}}"
+                                                        alt="" width="32px" height="32px">
+                                                </a>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!-- End Contact Section -->
+</div>
+<script>
+    const contact = document.getElementById("contact1");
+    // Add a class (quote) to the element
+    contact.classList.add("active");
+    const home = document.getElementById("home1");
+    // Add a class (quote) to the element
+    home.classList.remove("active");
+</script>
+{% endblock %}

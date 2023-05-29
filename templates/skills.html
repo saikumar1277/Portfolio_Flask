@@ -1,0 +1,197 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<div id="skills">
+
+    <style>
+        #grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-gap: 5px;
+        }
+
+        #grid>div {
+            font-size: 10px;
+            padding: .5em;
+            color: #3b3a3a;
+            /* background: #1c87c9; */
+            text-align: left;
+        }
+
+        .innercontainer {
+            width: 100%;
+            background-color: #ddd;
+        }
+
+        .skills {
+            text-align: right;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            color: white;
+        }
+
+        .java {
+            width: 70%;
+            background-color: Orange;
+        }
+
+        .webtechnologies {
+            width: 65%;
+            background-color: #2196F3;
+        }
+
+        .python {
+            width: 65%;
+            background-color: #f44336;
+        }
+
+        .sql {
+            width: 60%;
+            background-color: #04AA6D;
+        }
+
+        .mongoDb {
+            width: 50%;
+            background-color: Violet;
+        }
+
+        .others {
+            width: 50%;
+            background-color: #808080;
+        }
+    </style>
+    <div class="container mt-5">
+        <div id="grid">
+
+
+            <div style="font-size: 20px;">
+                <h2 style="color: #0d2f3f;">SKILLS & EXPERIENCE</h2>
+                <p>As I have started my coding journery in my first yeat of B.tech . I started with python and done some
+                    projects on it like snake game, and some other games.I create successful responsive web applications
+                    using HTML, CSS,
+                    JAVASCRIPT and have some hand on experience in SQL, mongoDb, firebase.</p>
+                <p>I have also participated in few hackathons and coding competitions.Participating in hackathons and
+                    coding
+                    competitions can be a great way to challenge myself and enhance my programming skills and also I
+                    have
+                    developed the leadership skills and time management.
+                    <!-- The main area of my expertise is front-end development, HTML, CSS, JS, building small and medium web
+                    apps, custom plugins, features, animations, and coding interactive layouts.-->
+                </p>
+                <!-- <p>I also have full-stack developer experience with popular open-source CMS like (WordPress, Drupal,
+                    Magento, Keystone.js and others) .</p> -->
+                <p>Visit my <a href="https://www.linkedin.com/in/sai-kumar-780b74207/">LinkedIn </a> profile for more
+                    details or just <a href="mailto:kongarisaikumar1277@gmail.com"> contact </a> me.</p>
+            </div>
+            <div>
+                <h2>MY SKILLS</h2>
+
+                <p style="display: inline;">JAVA</p>
+                <div class="innercontainer">
+
+                    <div class="skills java">70%</div>
+                </div>
+                <br>
+                <p style="display: inline;">HTML CSS JavaScript</p>
+                <div class="innercontainer">
+                    <div class="skills webtechnologies">65%</div>
+                </div>
+                <br>
+
+                <p style="display: inline;">Python</p>
+                <div class="innercontainer">
+                    <div class="skills python">65%</div>
+                </div>
+                <br>
+                <p style="display: inline;">SQL</p>
+                <div class="innercontainer">
+                    <div class="skills sql">60%</div>
+                </div>
+                <br>
+                <p style="display: inline;">Mongodb NodeJs</p>
+                <div class="innercontainer">
+                    <div class="skills mongoDb">60%</div>
+                </div>
+                <br>
+                <p style="display: inline;">React js React Native</p>
+                <div class="innercontainer">
+                    <div class="skills others">50%</div>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+
+
+    <div class="container my-3" id="certification">
+        <div class="m-3">
+            <h2 style="color: #0d2f3f; padding: 1px 32px;">Certification</h2>
+        </div>
+
+        {% for ele in certi %}
+        <div class="m-4">
+            <div class="container ">
+                <div class="row" style="background-color: #0e141e; color: white; border-radius: 67px;">
+                    <div class="col-sm-4 my-2">
+                        <div>
+                            <div>
+                                <h5 class="card-title">
+                                    <div>
+                                        {% set fname = 'images/' + ele.certi_image %}
+                                        <div class="row d-flex align-items-center justify-content-center ">
+                                            <div class="col-md-8 d-flex align-items-center justify-content-center"
+                                                style="margin: 10px;"><img class="img-thumbnail" width="200"
+                                                    height="250" src="{{ url_for('static',filename = fname)}}" alt="">
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </h5>
+                                <p class="card-text d-flex align-items-center justify-content-center"
+                                    style="color: deepskyblue;">{{ele.certi_on}}
+                                </p>
+                                <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-8">
+                        <div>
+                            <div>
+
+                                <div>
+                                    <div class="container" style="margin: 12px 3px;">
+                                        <h5 class="card-title my-2" style="color: deepskyblue;">{{ele.certi_from}}</h5>
+                                        {{ele.discription}}
+                                    </div>
+                                </div>
+                                <div class="m-3">
+                                    <a href="{{ele.certi_link}}" class="btn btn-primary">See
+                                        Projects</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+
+
+    </div>
+    <script>
+        const home = document.getElementById("home1");
+        // Add a class (quote) to the element
+        home.classList.remove("active");
+
+        const skills = document.getElementById("skills1");
+        // Add a class (quote) to the element
+        skills.classList.add("active");
+    </script>
+
+
+    {% endblock %}

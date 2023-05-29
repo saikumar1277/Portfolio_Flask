@@ -1,0 +1,157 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<style>
+    .hov {
+        font-size: 15px;
+        /* .box { */
+        position: relative;
+        animation-name: sai;
+        animation-duration: 0.5s;
+        animation-iteration-count: infinite;
+        animation-fill-mode: alternate;
+        animation-timing-function: ease-in;
+        animation-delay: 2;
+        animation-direction: alternate;
+
+    }
+
+    @keyframes sai {
+        from {
+            top: 0%;
+        }
+
+        to {
+            top: 2%;
+        }
+    }
+
+    /* } */
+</style>
+
+
+
+<style>
+    .hname {
+        display: flex;
+        -webkit-box-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        flex-direction: column;
+        align-items: flex-start;
+        min-height: 100vh;
+        height: 100vh;
+        padding: 0px;
+    }
+</style>
+
+<style>
+
+</style>
+
+
+<!-- after nav bar  -->
+<div id="bg_img1">
+    <div class="hname neato-header">
+        <p class="line-1 anim-typewriter" style="margin-left: 9px;color: #57cbff;">Hi, My Name is</p>
+
+        <p1 style=" font-size: clamp(40px, 7vw, 80px); color: #ccd6f6; margin: -7px 0px;"> Sai kumar.</p1>
+
+
+
+        <p2 class="box" style="color: #8892b0; font-size: clamp(32px, 4vw, 40px);">Quick Learner, Tech Enthusiast
+        </p2>
+
+
+
+        <div>
+            <p1>I am a final-year computer science engineering student. A hardworking individual with a great interest
+                in
+                software development and algorithmic problem solving and have a firm grasp in data structures and
+                algorithms. </p1>
+        </div>
+
+        <!-- <div class="homeIcon">
+        <div class="row1">
+             <a1 href="" class="hov"><button>Resume</button></a1> -->
+        <button class="button-40 hov" role="button">Resume</button>
+        <!-- </div>
+        </div> -->
+
+    </div>
+
+
+</div>
+
+<!-- end after nav bar -->
+
+
+
+
+<!-- todays quotes start  -->
+<!-- <div style="text-align: left;">
+    <div style="height: auto;" class="container my-5">
+        <h3> {{datetime}} : Todays quotes</h3>
+        {{quote}}
+    </div>
+</div> -->
+
+<!-- todays quotes end -->
+
+
+
+
+
+
+
+
+<!-- lower home part end -->
+<!-- <script>
+    gsap.registerPlugin(ScrollTrigger);
+    // REVEAL //
+    gsap.utils.toArray(".revealUp").forEach(function (elem) {
+        ScrollTrigger.create({
+            trigger: elem,
+            start: "top 80%",
+            end: "bottom 20%",
+            markers: true,
+            onEnter: function () {
+                gsap.fromTo(
+                    elem,
+                    { y: 100, autoAlpha: 0 },
+                    {
+                        duration: 1.25,
+                        y: 0,
+                        autoAlpha: 1,
+                        ease: "back",
+                        overwrite: "auto"
+                    }
+                );
+            },
+            onLeave: function () {
+                gsap.fromTo(elem, { autoAlpha: 1 }, { autoAlpha: 0, overwrite: "auto" });
+            },
+            onEnterBack: function () {
+                gsap.fromTo(
+                    elem,
+                    { y: -100, autoAlpha: 0 },
+                    {
+                        duration: 1.25,
+                        y: 0,
+                        autoAlpha: 1,
+                        ease: "back",
+                        overwrite: "auto"
+                    }
+                );
+            },
+            onLeaveBack: function () {
+                gsap.fromTo(elem, { autoAlpha: 1 }, { autoAlpha: 0, overwrite: "auto" });
+            }
+        });
+    });
+
+</script> -->
+
+
+{% endblock %}

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <link href="{{ url_for('static',filename = 'css/style.css')}}" rel="stylesheet" />
+    <link href="{{ url_for('static',filename = 'css/dash.css')}}" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    <!--FONT AWESOME-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!--GOOGLE FONTS-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Play&display=swap" rel="stylesheet">
+    <!-- url(https://images.unsplash.com/photo-1580137197581-df2bb346a786?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ);" -->
+</head>
+
+
+
+
+<body>
+
+    <!-- navbar start -->
+    <div class="container">
+        <nav class="navbar navbar-expand-sm navbar-light bg-light fixed-top">
+            <div class="container-fluid navbar transparent navbar-inverse  ">
+                <a class="navbar-brand mx-3 text-primary" href="/">Portfolio</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end mx-4" id="navbarSupportedContent">
+                    <ul class="navbar-nav  ">
+                        <li class="nav-item text-primary "><a class="nav-link scrollto  mx-3" href="/">Home</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link scrollto active mx-2" href="/login">Dashboard</a></li>
+                        <li class="nav-item"><a class="nav-link scrollto mx-2" href="logout">Log out</a></li>
+
+                    </ul>
+
+
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <!-- nav bar end -->
+
+    <h1>WELCOME TO DASHBOARD</h1>
+    <!-- <div> -->
+
+    <!-- <a href="/logout"> <button class="btn btn-primary"> LOG OUT</button></a> -->
+
+
+    <!-- </div> -->
+    <!-- <hr>
+    <div class="my-3">
+        EDIT SKILLS INFO
+        <a href="/skills/edit/0"> <button class="btn btn-primary"> ADD SKILLS </button></a>
+    </div>
+    <div>
+        <table class="table table-dark">
+            <thead>
+                <tr>
+                    <th scope="col">sno</th>
+                    <th scope="col">title</th>
+                    <th scope="col">discription</th>
+
+                    <th scope="col">Edit</th>
+                    <th scope="col">Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in skill%}
+                <tr>
+                    <th scope="row"> {{loop.index}} </th>
+                    <td>{{item.title}}</td>
+                    <td>{{item.description}}</td>
+                    <td> <a href="/skills/edit/{{item.sno}}" class="btn btn-primary">Edit</a> </td>
+                    <td> <a href="/skills/delete/{{item.sno}}" class="btn btn-primary">Delete</a> </td>
+                </tr>
+                {% endfor %}
+
+            </tbody>
+        </table>
+    </div> -->
+
+
+    <div class="my-3">
+        EDIT CERTIFICATIONS INFO
+        <a href="/certificates/edit/0"> <button class="btn"
+                style="color: rgb(55, 135, 135); text-decoration: black underline;"> ADD
+                CERTIFICATES
+            </button></a>
+    </div>
+    <div class='table-scrollable'>
+        <table class=" table table-dark">
+            <thead>
+                <tr>
+                    <th scope="col">sno</th>
+                    <th scope="col">certification image_link</th>
+                    <th scope="col">certification from</th>
+                    <th scope="col">certification on</th>
+                    <th scope="col">discription</th>
+                    <th scope="col">Link of certificate</th>
+
+                    <th scope="col">Edit</th>
+                    <th scope="col">Delete</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                {% for item in certi%}
+                <tr>
+                    <th scope="row"> {{loop.index}} </th>
+                    <td>{{item.certi_image}}</td>
+                    <td>{{item.certi_from}}</td>
+                    <td>{{item.certi_on}}</td>
+                    <td>{{item.discription}}</td>
+                    <td>{{item.certi_link}}</td>
+
+
+
+                    <td> <a href="/certificates/edit/{{item.sno}}" class="btn btn-primary">Edit</a> </td>
+                    <td> <a href="/certificate/delete/{{item.sno}}" class="btn btn-primary">Delete</a> </td>
+                </tr>
+                {% endfor %}
+
+            </tbody>
+        </table>
+    </div>
+
+
+
+
+    <!-- start footer -->
+
+    <div>
+
+        <div class="footer">
+            <div class="row" style="display: inline-block;">
+                <a1 href="#"><i class="fa fa-facebook"></i></a1>
+                <a1 href="#"><i class="fa fa-instagram"></i></a1>
+                <a1 href="#"><i class="fa fa-youtube"></i></a1>
+                <a1 href="#"><i class="fa fa-twitter"></i></a1>
+            </div>
+
+            <div class="row">
+                <ul>
+                    <li>
+                        <a1 href="#">Contact us</a1>
+                    </li>
+                    <li>
+                        <a1 href="#">Our Services</a1>
+                    </li>
+                    <li>
+                        <a1 href="#">Privacy Policy</a1>
+                    </li>
+                    <li>
+                        <a1 href="#">Terms & Conditions</a1>
+                    </li>
+                    <li>
+                        <a1 href="#">Career</a1>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="row">
+                INFERNO Copyright © 2021 Inferno - All rights reserved || Designed By: Mahesh
+            </div>
+        </div>
+        </footer>
+
+    </div>
+
+
+
+    <!-- end footer -->
+
+
+</body>
+
+</html>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>

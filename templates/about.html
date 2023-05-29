@@ -1,0 +1,98 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<style>
+    #grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-gap: 5px;
+    }
+
+    #grid>div {
+        /* font-size: 30px; */
+        padding: .5em;
+        color: #887f7f;
+        /* background: #1c87c9; */
+        text-align: left;
+    }
+</style>
+<div class="mt-5" id="about" style="background-color: #040b17;; color: white;">
+    <div class="m-4">
+        <h4 class="my-4">About</h4>
+        My Objective in life is,seek challenges and responsibilities with an opportunity for growth and career
+        advancement
+    </div>
+    <div class="container">
+        <div class="row my-4">
+            <div class="col-sm-4 my-2">
+                <div>
+                    <div>
+                        <h5>
+                            <div>
+                                <div class="row d-flex align-items-center justify-content-center">
+                                    <div class="col-md-8 "><img class="img-thumbnail" style="border-radius: 157px;"
+                                            src="{{ url_for('static',filename = 'images/profileImage.jpg')}}" alt="">
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </h5>
+                        <p class="card-text d-flex align-items-center justify-content-center text-white">KONGARI SAI
+                            KUMAR
+                        </p>
+                        <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-8">
+                <div>
+                    <div>
+                        <p>Hello Everyone , I am currently pursuing fourth year of .B.Tech in CSE(Cyber Security).I am
+                            very interested in
+                            programming ,I am comfortable in java ,In 1st year of my college I learnt python , it's
+                            simpler syntax make me to do lots of programs, and developed interest in Data Science, so I
+                            done Python for Data Science, In 2nd year I got deep interest in Web Development so i
+                            learnt HTML CSS JS and also SQL ,mongoDb, firebase , flask and this portfolio website is
+                            built by flask itself,In my 3rd year I have done two projects one is a REST
+                            API and other is a Chat Bot. <br> <br>
+                            My strengths are my self-confidence and my willingness to improve myself. My hobbies are
+                            playing chess, cricket , listening to music.
+                            <!-- and  apart from academics I am a Videographer and editor. -->
+                            Currently I am looking to join a tech company where I can learn from others as well as apply
+                            the knowledge which I have learned in my coding journey.
+                        </p>
+
+
+                        <div id="grid">
+                            <div><span>Gmail : kongarisaikumar1277@gmail.com</span></div>
+                            <div>Degree : B.tech Cse(cs)</div>
+                            <!-- <div> Leetcode : www.leetcode.com</div>
+                            <div>Phone Number : 6304037823</div>
+                            <div>Websit link : portfolio.com</div>
+                            <div>Address : Hyderabad </div> -->
+
+                        </div>
+                        <a href="#" class="btn btn-primary m-3">Resume</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Get the element with id="id1"
+    const element = document.getElementById("about1");
+    // Add a class (quote) to the element
+    element.classList.add("active");
+    // Get the element with id="id1"
+    const home = document.getElementById("home1");
+    // Add a class (quote) to the element
+    home.classList.remove("active");
+
+    const contact = document.getElementById("contact1");
+    // Add a class (quote) to the element
+    contact.classList.remove("active");
+</script>
+{% endblock %}
